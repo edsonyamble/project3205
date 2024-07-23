@@ -1,0 +1,24 @@
+{
+	"name": "node_login_mysql",
+	"version": "1.0.0",
+	"description": "login",
+	"main": "login.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"dev": "nodemon login.js"
+	},
+	"engines": {
+		"node": "21.6.1"
+	},
+	"author": "edson",
+	"license": "ISC",
+	"dependencies": {
+		"cors": "^2.8.5",
+		"express": "^4.19.2",
+		"express-session": "^1.18.0",
+		"mysql": "^2.18.1"
+	},
+	"devDependencies": {
+		"nodemon": "^3.1.4"
+	}
+}
