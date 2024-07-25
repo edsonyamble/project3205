@@ -21,13 +21,18 @@ export default {
   data() {
     return {
       email: '',
-      password: ''
+      password: '',
     }
   },
   methods: {
     submitForm() {
+      // const data = { email: this.email, password: this.password }
       axios
-        .post(`http://localhost:3500/auth`, { email: this.email, password: this.password })
+        .post(`http://localhost:3500/auth`, {
+          email: this.email,
+          password: this.password,
+          Headers: { Authorization: 'Bearer' + localStorage.getItem('token') }
+        })
         .then((res) => {
           console.log(res)
         })
