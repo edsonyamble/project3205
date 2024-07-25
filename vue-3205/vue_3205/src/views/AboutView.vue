@@ -9,7 +9,7 @@ import axios from 'axios'
 export default {
   mounted() {
     axios
-      .get(`https://jsonplaceholder.typicode.com/posts`)
+      .get(`http://localhost:3500/form`)
       .then((response) => {
         console.log(response)
       })

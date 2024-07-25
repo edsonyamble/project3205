@@ -1,7 +1,7 @@
 <template>
-  <div id="app">
+  <div>
     <h1>get</h1>
-    <div v-if="info">{{ info.email }}</div>
+     {{ info }}
   </div>
 </template>
 <style scoped></style>
@@ -11,16 +11,15 @@ export default {
   name: 'GetFormAxios',
   data() {
     return {
-      info: null
+     info: null
     }
   },
   methods: {
     mounted() {
       axios
-        .get(`http://localhost:3010`, { info: this.info })
+        .get(`http://localhost:3500/auth`)
         .then((res) => {
           console.log(res.data)
-          info = res
         })
         .catch((error) => {
           console.log(error)
